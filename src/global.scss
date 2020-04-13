@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #66CCFF;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  min-width: 1366px;
+  min-height: 768px;
+  background: rgba(10, 0, 42, 1);
+  font-family: 'PingFangSC-Regular', 'PingFang SC';
+} 
+
+li {
+  list-style: none;
+}
+
+:global {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    min-width: 1366px;
+    min-height: 768px;
+    background: rgba(10, 0, 42, 1);
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+  }
+
+  li {
+    list-style: none;
+  }
+}

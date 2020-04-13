@@ -4,7 +4,7 @@ export default class index extends Component {
     render() {
         return (
             <div>
-                about
+                about111111111111111111111111
             </div>
         )
     }

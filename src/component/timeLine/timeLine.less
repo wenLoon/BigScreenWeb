@@ -1,0 +1,269 @@
+.timeline {
+    text-align: center;
+    margin    : 16px auto;
+    display   : table;
+}
+
+.timeline>div {
+    float: left;
+}
+
+.timeline::after {
+    clear  : both;
+    display: block;
+    content: "";
+}
+
+.number-progress {
+    width           : 32px;
+    height          : 32px;
+    line-height     : 32px;
+    background-color: #d75959;
+    color           : #ffffff;
+    font-size       : 14px;
+    text-align      : center;
+    border-radius   : 25px;
+    margin-bottom   : 32px;
+    float           : left;
+}
+
+.number-progress::after {
+    clear  : both;
+    content: "";
+}
+
+.number-notstart {
+    width           : 32px;
+    height          : 32px;
+    line-height     : 32px;
+    background-color: rgba(255, 255, 255, 0);
+    color           : rgba(190, 194, 201, 1);
+    font-size       : 14px;
+    text-align      : center;
+    border          : 1px solid rgba(190, 194, 201, 1);
+    border-radius   : 25px;
+    margin-bottom   : 32px;
+    float           : left;
+}
+
+.number-complete {
+    width        : 32px;
+    height       : 32px;
+    line-height  : 32px;
+    color        : rgba(215, 89, 89, 1);
+    font-size    : 14px;
+    text-align   : center;
+    border-radius: 25px;
+    border       : 1px solid rgba(215, 89, 89, 1);
+    margin-bottom: 32px;
+    float        : left;
+}
+
+.hr-complete {
+    border    : none;
+    border-top: 1px solid #d75959;
+    width     : 80px;
+    margin    : 25px 8px;
+    float     : left;
+}
+
+.hr-notstart {
+    border    : none;
+    border-top: 1px solid #bec2c9;
+    width     : 80px;
+    margin    : 25px 8px;
+    float     : left;
+}
+
+.number-words-weight {
+    color: rgba(0, 0, 0, 0.85);
+    width: max-content;
+}
+
+.number-words {
+    color    : rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    width    : max-content;
+}
+
+
+.step-tars {
+    height : 140px;
+    padding: 40px 0;
+
+    .st-content {
+        height: 60px;
+
+        .stc-number {
+            height : 32px;
+            padding: 0 0 0 15px;
+
+            ul {
+                padding   : 0;
+                margin    : 0;
+                list-style: none;
+
+                &::after {
+                    display: table;
+                    clear  : both;
+                    content: "";
+                }
+
+                li {
+                    padding   : 18px 0 0 0;
+                    margin    : 0;
+                    list-style: none;
+                    display   : block;
+                    float     : left;
+                    width     : 180px;
+                    position  : relative;
+
+                    &.in-complete {
+
+                        .cell {
+
+                            span {
+                                color       : rgba(215, 89, 89, 1);
+                                border-color: rgba(215, 89, 89, 1);
+                            }
+                        }
+
+                        .st-vice-cell {
+                            color       : rgba(215, 89, 89, 1) !important;
+                            border-color: rgba(215, 89, 89, 1) !important;
+                        }
+
+                        .st-line {
+                            border-color: #d75959;
+                        } 
+                        .st-vice, .st-vice-row, .st-vice-r, .st-vice-row-r {
+                            border-color: #d75959 !important;
+                        }
+                    }
+
+                    &.in-progress {
+
+                        .cell {
+
+                            span {
+                                background  : rgba(215, 89, 89, 1);
+                                color       : #fff;
+                                border-color: rgba(215, 89, 89, 1);
+                            }
+                        } 
+
+                        .st-vice-cell {
+                            background  : rgba(215, 89, 89, 1) !important;
+                            color       : #fff !important;
+                            border-color: rgba(215, 89, 89, 1) !important;
+                        }  
+                        .st-vice, .st-vice-row, .st-vice-r, .st-vice-row-r {
+                            border-color: #d75959 !important;
+                        }
+                    }
+
+                    &:last-child {
+                        width: 50px;
+                    }
+
+                    .st-line {
+                        border: 1px dashed #bfbfbf;
+                    }
+
+                    .cell {
+                        display   : block;
+                        position  : absolute;
+                        top       : 0;
+                        left      : 0;
+                        width     : 50px;
+                        height    : 100%;
+                        padding   : 0 9px;
+                        /* // background: #fff; */
+                        background: #0a002a;
+
+                        span {
+                            cursor       : pointer;
+                            height       : 32px;
+                            width        : 32px;
+                            border-radius: 50%;
+                            border       : solid 1px rgba(190, 194, 201, 1);
+                            color        : rgba(190, 194, 201, 1);
+                            text-align   : center;
+                            line-height  : 30px;
+                            display      : block;
+                            box-sizing   : border-box;
+                        }
+
+                        .vice {
+                            display: inline-flex;
+                            .st-vice {
+                                width: 100%;
+                                height: 40px;
+                                border-left: 2px dashed #bfbfbf;
+                                margin: 9px 0 0 16px;
+                            }
+                            .st-vice-row {
+                                width: 60px;
+                                height: 2px;
+                                border-top: 2px dashed #bfbfbf;
+                                margin: 0 0 9px 16px;
+                            }
+                            .st-vice-r {
+                                width: 100%;
+                                height: 40px; 
+                                margin-top: 9px;
+                                border-right: 2px dashed #bfbfbf;
+                            }
+                            .st-vice-row-r {
+                                width: 70px;
+                                height: 2px;
+                                border-top: 2px dashed #bfbfbf;
+                            }
+    
+                            .st-vice-cell {
+                                cursor       : pointer;
+                                height       : 32px;
+                                width        : 32px;
+                                border-radius: 50%;
+                                border       : solid 1px rgba(190, 194, 201, 1);
+                                color        : rgba(190, 194, 201, 1);
+                                text-align   : center;
+                                line-height  : 30px;
+                                display      : block;
+                                box-sizing   : border-box;
+                                margin: 32px 9px 0 9px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.stc-title {
+                padding-top: 12px;
+                color      : rgba(0, 0, 0, 0.45);
+                font-size  : 14px;
+
+                ul {
+                    li {
+                        padding: 0;
+
+                        &:last-child {
+                            width   : 65px;
+                            overflow: hidden;
+                        }
+
+                        &.in-progress {
+                            /* color: rgba(0, 0, 0, 0.85); */
+                            color: white;
+                        }
+
+                        &.in-complete {
+                            /* color: rgba(0, 0, 0, 0.85); */
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

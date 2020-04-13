@@ -1,0 +1,40 @@
+.sliden-component{
+  .ant-slider-with-marks{
+    margin-top: 20px;
+    .ant-slider-mark{
+      .ant-slider-mark-text{
+        color: #fff;
+      }
+      .ant-slider-mark-text-active{
+        color: #fff;
+      }
+    }
+  }
+  .tips{
+      margin: 12px 0 5px 0;
+      border-bottom: 1px solid #fff;
+    .words{
+      text-align: right;
+      margin-right: 15%;
+      .time{
+        display: block;
+        >div {
+          margin: auto 4px;
+          background: #fff;
+          border-radius: 5px 5px 0 0;
+          width: 38px;
+          text-align: center;
+          display: inline-block;
+          &.active{
+            background: blue;
+            color: #fff;
+          }
+          &:hover{
+            background: blue;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
